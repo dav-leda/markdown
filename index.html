@@ -308,60 +308,85 @@ pre[data-line] .line-highlight[data-end]:after {
 .markdown-preview.markdown-preview code,
 .markdown-preview.markdown-preview pre[data-role="codeBlock"] {
   background-color: #e5e5ee;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 .markdown-preview.markdown-preview .token {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
       </style>
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <div><h1 class="mume-header" id="css-en-vuejs">CSS en Vue.js</h1>
+      <div><h1 class="mume-header" id="probando-_markdown-preview-enhanced_-%EF%B8%8F">Probando <em>Markdown Preview Enhanced</em> &#x1F6E0;&#xFE0F;</h1>
 
-<p>Una de las ventajas de Vue.js es la facilidad con la que se pueden aplicar clases de CSS a elementos HTML en forma din&#xE1;mica, es decir, de acuerdo a c&#xF3;mo van cambiando los datos de la aplicaci&#xF3;n.</p>
-<p>Por ejemplo, tenemos una tabla con una lista de alumnos y queremos que al cliquear sobre el nombre la propiedad <code>alumno.presente</code> pase de <code>false</code> a <code>true</code> (o viceversa), y que adem&#xE1;s, el color de fondo de esa fila pase a ser verde:</p>
-<p>El color de fondo cambia porque le estamos indicando a Vue que, cuando esa propiedad cambia, que le agregue a esa fila la clase de CSS <code>&apos;fondo-verde&apos;</code>.</p>
-<p>Y, &#xBF;c&#xF3;mo cambiamos las clases de CSS de acuerdo a los datos? De varias maneras. Vue es tan flexible en este punto que hasta resulta confuso por la variedad de formas en que se puede hacer.</p>
-<p>Veamos una por una:</p>
-<h2 class="mume-header" id="clase-simple">Clase simple</h2>
+<p><a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/">Markdown Preview Enhanced</a> es una extensi&#xF3;n para Visual Studio Code que permite transformar archivos <code>.md</code> en archivos <code>.html</code>, lo cual facilita la creaci&#xF3;n de p&#xE1;ginas de documentaci&#xF3;n, ya que escribir c&#xF3;digo <a href="https://www.markdownguide.org/getting-started/">Markdown</a> es mucho m&#xE1;s f&#xE1;cil y r&#xE1;pido que escribir HTML.</p>
+<p>Lo &#xFA;nico que hay que hacer es crear un archivo <code>.md</code> como &#xE9;ste, abrirlo con la opci&#xF3;n <em>Open Preview To The Side</em> dentro de la <em>Command Palette</em> de VS Code. Ah&#xED; se abre una ventana a la derecha con una preview del archivo <em>markdown</em> tal como se ver&#xED;a en un browser.</p>
+<p>Luego, para convertirlo a HTML lo &#xFA;nico que hay que hacer es darle click derecho sobre la preview y seleccionar la opci&#xF3;n <em>HTML (cdn hosted)</em>. Ah&#xED; vamos a ver que se crea un archivo <code>.html</code> con la conversi&#xF3;n:</p>
+<p><img src="./assets/markdown-preview.png" alt="preview"></p>
+<p>Si abrimos ese archivo con <a href="https://ritwickdey.github.io/vscode-live-server/">Live Server</a> podemos ver el resultado final &#x1F389;&#xFE0F;</p>
+<h2 class="mume-header" id="ejemplos-de-c%C3%B3digo-%EF%B8%8F">Ejemplos de c&#xF3;digo &#x1F4BB;&#xFE0F;</h2>
 
-<p>Esta es la forma m&#xE1;s f&#xE1;cil de hacerlo, pero s&#xF3;lo puede ser usada cuando el dato y la clase de CSS tienen el mismo nombre.</p>
-<p>Por ejemplo, en <code>data</code> tengo una propiedad llamada <code>rojo</code> y en <code>&lt;style&gt;</code> tengo una clase de CSS tambi&#xE9;n llamada <code>rojo</code>.</p>
-<p>Entoces, al elmento de HTML que quiero que cambie de color le agrego el atributo <code>v-bind:class</code> (o sea, una clase din&#xE1;mica, que cambia de acuerdo al dato que se le pase), o en forma abreviada: <code>:class</code>.</p>
-<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+<p>Podemos usar <em>markdown</em> para mostrar ejemplos de c&#xF3;digo en cualquier lenguaje. Todos los bloques de c&#xF3;digo declarados dentro de triples <a href="https://wumbo.net/symbols/backtick/">backticks</a> se muestran autom&#xE1;ticamente con <a href="https://www.markdownguide.org/extended-syntax/#syntax-highlighting">syntax highlighting</a>:</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>header<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Markdown convertido en HTML<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>paragraph<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>El resultado final es c&#xF3;digo HTML como este.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</pre><h2 class="mume-header" id="estilos-de-css-%EF%B8%8F">Estilos de CSS &#x1F485;&#xFE0F;</h2>
 
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ rojo }<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>cambiarColor<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> CLASE SIMPLE <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
-
-<span class="token keyword module keyword-export">export</span> <span class="token keyword module keyword-default">default</span> <span class="token punctuation">{</span>
-
-  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
-    rojo<span class="token operator">:</span> <span class="token boolean">false</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-
-  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token function">cambiarColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">rojo</span> <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token property-access">rojo</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
+<p>Adem&#xE1;s, <em>MPE</em> permite darle estilos de CSS a nuestro <em>markdown</em>. En este ejemplo estoy usando CSS para importar un font de <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+<p>Para usar CSS dentro del <em>markdown</em> hay que entrar nuevamente a la <em>Command Palette</em> de VS Code y seleccionar <em>Customize CSS</em>.</p>
+<p>Ah&#xED; se va a abrir una pesta&#xF1;a dentro de VS Code con el archivo <code>style.less</code>. Dentro de ese archivo vamos a ver una clase de CSS (o, mejor dicho, de <a href="https://lesscss.org/">Less</a>) llamada <code>.markdown-preview.markdown-preview</code>. Dentro de esta clase podemos agregar los estilos que querramos y se van a ver reflejados en la preview:</p>
+<pre data-role="codeBlock" data-info="css" class="language-css"><span class="token selector"><span class="token class">.markdown-preview</span><span class="token class">.markdown-preview</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* modify your style here */</span>
 <span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</pre><h2 class="mume-header" id="%EF%B8%8F-%EF%B8%8F-%EF%B8%8F-%EF%B8%8F">&#x1F4BB;&#xFE0F; &#x260E;&#xFE0F; &#x1F6E0;&#xFE0F; &#x1F3B2;&#xFE0F;</h2>
+</pre><p>Por ejemplo, para cambiar los fonts y los colores:</p>
+<pre data-role="codeBlock" data-info="css" class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token function">url</span><span class="token punctuation">(</span>&apos;<span class="token property">https</span><span class="token punctuation">:</span>//fonts.googleapis.com/css2?family=<span class="token property">Ysabeau</span><span class="token punctuation">:</span>ital<span class="token atrule"><span class="token rule">@0</span><span class="token punctuation">;</span></span></span><span class="token number">1</span>&amp;display=swap&apos;<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<h2 class="mume-header" id="%EF%B8%8F%EF%B8%8F-%EF%B8%8F%EF%B8%8F-%EF%B8%8F%EF%B8%8F-%EF%B8%8F-%EF%B8%8F%EF%B8%8F-%EF%B8%8F">&#x1F937;&#x200D;&#x2642;&#xFE0F;&#xFE0F; &#x1F926;&#x200D;&#x2642;&#xFE0F;&#xFE0F; &#x1F645;&#x200D;&#x2642;&#xFE0F;&#xFE0F; &#x1F9A5;&#xFE0F; &#x1F64E;&#x200D;&#x2642;&#xFE0F;&#xFE0F; &#x1F64F;&#xFE0F;</h2>
+<span class="token selector"><span class="token class">.markdown-preview</span><span class="token class">.markdown-preview</span></span> <span class="token punctuation">{</span>
+  
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">&apos;Ysabeau&apos;</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
 
-<h2 class="mume-header" id="%EF%B8%8F-%EF%B8%8F">&#x1F4A1;&#xFE0F; &#x1F4DD;&#xFE0F;</h2>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token color"><span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">240</span><span class="token punctuation">,</span> <span class="token number">239</span><span class="token punctuation">,</span> <span class="token number">241</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+  
+  <span class="token selector">h1<span class="token punctuation">,</span> h2<span class="token punctuation">,</span> h3<span class="token punctuation">,</span> h4<span class="token punctuation">,</span> h5<span class="token punctuation">,</span> h6<span class="token punctuation">,</span> p</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token color"><span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">74</span><span class="token punctuation">,</span> <span class="token number">74</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="crear-una-p%C3%A1gina-en-github-pages-%EF%B8%8F">Crear una p&#xE1;gina en GitHub Pages &#x1F4DD;&#xFE0F;</h2>
 
+<p>Luego de generar el archivo HTML podemos inicializar un repositiorio usando <em>Source Control</em> de VS CODE y hacer un <em>commit</em> a GitHub:</p>
+<p><img src="./assets/primer-commit.png" alt="commit"></p>
+<p>Luego, en el repositorio en GitHub, entramos a <em>Settings, Pages</em> y seleccionamos <em>Deploy from a branch</em> con la rama <em>master</em>:</p>
+<p><img src="./assets/github-pages.png" alt="github pages"></p>
+<p>Le dan <em>Save</em> y luego de unos segundos le dan <em>refresh</em> al browser y van a ver un cartel con el siguiente mensaje:</p>
+<p><mark>Your site is live at <a href="https://usuario.github.io/repositorio">https://usuario.github.io/repositorio</a></mark></p>
+<p>Y listo, ya tienen su p&#xE1;gina online &#x1F973;&#xFE0F;</p>
+<h2 class="mume-header" id="sintaxis-markdown-%EF%B8%8F">Sintaxis Markdown &#x1F468;&#x200D;&#x1F4BB;&#xFE0F;</h2>
+
+<p>La sintaxis markdown permite crear f&#xE1;cilmente elementos como <a href="https://www.markdownguide.org/extended-syntax/#tables">tablas</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fila 1</td>
+<td>Contenido 1</td>
+</tr>
+<tr>
+<td>Fila 2</td>
+<td>Contenido 2</td>
+</tr>
+</tbody>
+</table>
+<p>O <a href="https://www.markdownguide.org/extended-syntax/#task-lists">listas de tareas</a></p>
 <ul>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Ejercicio <code>v-model</code></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Ejercicio <code>v-for</code></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Ejercicio <code>v-if</code></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Aprender a usar Markdown</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked> Instalar Markdown Preview Enhanced</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox"> Crear p&#xE1;gina en GitHub Pages</li>
 </ul>
+<p>Y muchas cosas m&#xE1;s &#x1F642;&#xFE0F;</p>
 </div>
       </div>
       
