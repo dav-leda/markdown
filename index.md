@@ -8,7 +8,13 @@ Lo único que hay que hacer es crear un archivo `.md` como éste, abrirlo con la
 
 Luego, para convertirlo a HTML lo único que hay que hacer es darle click derecho sobre la preview y seleccionar la opción _HTML (cdn hosted)_. Ahí vamos a ver que se crea un archivo `.html` con la conversión:
 
-![preview](./assets/markdown-preview.png)
+<img 
+  src="./assets/markdown-preview.png" 
+  alt="markdown preview"
+  width="500"
+  style="text-align:center;"
+/>
+
 
 Si abrimos ese archivo con [Live Server](https://ritwickdey.github.io/vscode-live-server/) podemos ver el resultado final 🎉️
 
@@ -55,11 +61,21 @@ Por ejemplo, para cambiar los fonts y los colores:
 
 Luego de generar el archivo HTML podemos inicializar un repositiorio usando _Source Control_ de VS CODE y hacer un _commit_ a GitHub:
 
-![commit](./assets/primer-commit.png)
+<img 
+  src="./assets/primer-commit.png" 
+  alt="markdown preview"
+  width="300"
+  style="margin: 20px auto;"
+/>
 
 Luego, en el repositorio en GitHub, entramos a _Settings, Pages_ y seleccionamos _Deploy from a branch_ con la rama _master_:
 
-![github pages](./assets/github-pages.png)
+<img 
+  src="./assets/github-pages.png" 
+  alt="markdown preview"
+  width="300"
+  style="margin: 20px auto;"
+/>
 
 Le dan _Save_ y luego de unos segundos le dan _refresh_ al browser y van a ver un cartel con el siguiente mensaje:
 
