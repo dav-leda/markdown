@@ -260,19 +260,28 @@ pre[data-line] .line-highlight[data-end]:after {
   font-family: 'Ysabeau';
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
   src: url(https://fonts.gstatic.com/s/ysabeau/v1/kmKsZqEiBAXLcnuMlD9_3CYscnjwsKZeS95zKcU.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Ysabeau';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
   src: url(https://fonts.gstatic.com/s/ysabeau/v1/kmKiZqEiBAXLcnuMvjZNI_5FGeJet7OWCDYw.ttf) format('truetype');
 }
 .markdown-preview.markdown-preview {
+  animation: fadein 2s ease-in;
   font-family: 'Ysabeau', sans-serif;
   background-color: #f0eff1;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .markdown-preview.markdown-preview h1,
 .markdown-preview.markdown-preview h2,
@@ -307,6 +316,7 @@ pre[data-line] .line-highlight[data-end]:after {
 }
 .markdown-preview.markdown-preview code,
 .markdown-preview.markdown-preview pre[data-role="codeBlock"] {
+  font-family: 'Courier New', Courier, monospace;
   background-color: #e5e5ee;
   font-size: 1rem;
 }
