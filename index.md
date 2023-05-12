@@ -1,5 +1,6 @@
 
 
+
 # Probando _Markdown Preview Enhanced_ 🛠️
 
 [Markdown Preview Enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/) es una extensión para Visual Studio Code que permite transformar archivos `.md` en archivos `.html`, lo cual facilita la creación de páginas de documentación, ya que escribir código [Markdown](https://www.markdownguide.org/getting-started/) es mucho más fácil y rápido que escribir HTML.
@@ -22,10 +23,20 @@ Si abrimos ese archivo con [Live Server](https://ritwickdey.github.io/vscode-liv
 
 Podemos usar _markdown_ para mostrar ejemplos de código en cualquier lenguaje. Todos los bloques de código declarados dentro de triples [backticks](https://wumbo.net/symbols/backtick/) se muestran automáticamente con [syntax highlighting](https://www.markdownguide.org/extended-syntax/#syntax-highlighting):
 
-```html
-<h1 class="header">Markdown convertido en HTML</h1>
-<p class="paragraph">El resultado final es código HTML como este.</p>
+```js
+const { floor, random } = Math;
+
+// Fisher-Yates shuffle:
+const shuffle = array => {
+  array.forEach( (_, i, arr) => {
+    let j = floor( random() * (i + 1) );
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  })
+  return array
+}
 ```
+
+
 
 ## Estilos de CSS 💅️
 
@@ -51,10 +62,8 @@ Por ejemplo, para cambiar los fonts y los colores:
   font-family: 'Ysabeau', sans-serif;
 
   background-color: rgb(240, 239, 241);
-  
-  h1, h2, h3, h4, h5, h6, p {
-    color: rgb(81, 74, 74);
-  }
+
+}
 ```
 
 ## Crear una página en GitHub Pages 📝️ 
