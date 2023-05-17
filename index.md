@@ -58,11 +58,8 @@ Por ejemplo, para cambiar los fonts y los colores:
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital@0;1&display=swap');
 
 .markdown-preview.markdown-preview {
-  
   font-family: 'Ysabeau', sans-serif;
-
   background-color: rgb(240, 239, 241);
-
 }
 ```
 
