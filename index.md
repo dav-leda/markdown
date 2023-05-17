@@ -66,6 +66,18 @@ Por ejemplo, para cambiar los fonts y los colores:
 }
 ```
 
+## Videos
+
+También es posible insertar videos:
+
+<video width="600" autoplay loop>
+  <source src="./assets/ejemplo-leble.webm" type="video/webm">
+</video>
+
+<video width="600" controls preload="none">
+  <source src="./assets/ejemplo-quijote.webm" type="video/webm">
+</video>
+
 ## Crear una página en GitHub Pages 📝️ 
 
 Luego de generar el archivo HTML podemos inicializar un repositiorio usando _Source Control_ de VS CODE y hacer un _commit_ a GitHub:
