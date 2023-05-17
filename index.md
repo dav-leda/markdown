@@ -67,7 +67,7 @@ Por ejemplo, para cambiar los fonts y los colores:
 
 También es posible insertar videos:
 
-<video width="600" autoplay loop>
+<video width="600" controls preload="none">
   <source src="./assets/ejemplo-leble.webm" type="video/webm">
 </video>
 
